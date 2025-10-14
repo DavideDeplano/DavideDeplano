@@ -34,6 +34,9 @@
 
 ## 🧩 Selected Projects
 
+- [🧹 python-data-cleaning-tool](https://github.com/DavideDeplano/python-data-cleaning-tool)
+  _Automated CSV cleaning and data summarization in Python._
+
 - [🔐 cyber-intrusion-detection](https://github.com/DavideDeplano/cyber-intrusion-detection)  
   _Intrusion detection using deep learning and classic ML on the KDD 1999 dataset._
 
