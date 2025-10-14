@@ -37,7 +37,7 @@
 - [🧹 python-data-cleaning-tool](https://github.com/DavideDeplano/python-data-cleaning-tool)   
   _Automated CSV cleaning and data summarization in Python._
 
-- [📊 python-sales-visualization-tool](https://github.com/DavideDeplano/python-sales-visualization-tool)
+- [📊 python-sales-visualization-tool](https://github.com/DavideDeplano/python-sales-visualization-tool)   
   _A Python script that automatically generates visual reports from cleaned CSV sales data._
 
 - [🔐 cyber-intrusion-detection](https://github.com/DavideDeplano/cyber-intrusion-detection)  
