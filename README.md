@@ -34,7 +34,7 @@
 
 ## 🧩 Selected Projects
 
-- [🧹 python-data-cleaning-tool](https://github.com/DavideDeplano/python-data-cleaning-tool) 
+- [🧹 python-data-cleaning-tool](https://github.com/DavideDeplano/python-data-cleaning-tool)   
   _Automated CSV cleaning and data summarization in Python._
 
 - [🔐 cyber-intrusion-detection](https://github.com/DavideDeplano/cyber-intrusion-detection)  
