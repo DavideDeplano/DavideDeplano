@@ -34,7 +34,7 @@
 
 ## 🧩 Selected Projects
 
--[🕸️ url-data-extractor](https://github.com/DavideDeplano/url-data-extractor)    
+- [🕸️ url-data-extractor](https://github.com/DavideDeplano/url-data-extractor)    
   _Asynchronous Python scraper that extracts clean text and metadata (titles, headings, descriptions) from multiple web pages and exports structured CSV/Parquet datasets._   
   
 - [🧹 python-data-cleaning-tool](https://github.com/DavideDeplano/python-data-cleaning-tool)   
