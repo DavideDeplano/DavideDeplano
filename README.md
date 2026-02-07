@@ -20,15 +20,25 @@
 
 ---
 
-## 🚀 What I'm working on
+## Research & Internship Project
 
-- 🧠 **Machine Learning & Deep Learning**
-  - Projects using MLP, VAE, Random Forest, One-Class SVM
-  - Hands-on experience with TensorFlow, Keras, and Scikit-learn
-- 🧪 **Data Science & Analysis**
-  - Exploratory analysis, data pipelines, anomaly detection
-- 👨‍💻 **Software Engineering**
-  - Python modular projects, simulation pipelines, and testing
+**Anomaly Detection in Radio Astronomy (Internship @ INAF – Sardinia Radio Telescope)**  
+Research project on anomaly detection and technosignature search in radio astronomy data, based on real observations from the Sardinia Radio Telescope, using machine learning and signal processing techniques.
+
+🔗 Repository: https://github.com/DavideDeplano/srt-anomaly-detection
+
+---
+
+## What I'm working on
+
+🧠 **Machine Learning & Deep Learning**  
+Applied models including MLP, VAE, Random Forest, and One-Class SVM on real and simulated datasets.
+
+🧪 **Data Science & Analysis**  
+End-to-end pipelines for data cleaning, feature extraction, anomaly detection, and evaluation.
+
+👨‍💻 **Software Engineering**  
+Modular Python projects, simulation pipelines, configuration-driven design, and testing.
 
 ---
 
@@ -54,14 +64,6 @@
 
 - [🎮 frogger_resurrection](https://github.com/DavideDeplano/frogger_resurrection)  
   _Frogger clone in C using threads, sockets, and basic concurrency._
-
----
-
-## 📌 Goals
-
-- 👨‍💼 Build experience as a junior data scientist / ML engineer
-- 💻 Continue developing Python + data engineering skills
-- 🎯 Contribute to meaningful, real-world problems through data
 
 ---
 
