@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Davide Deplano
 
-🎓 **BSc in Applied Computer Science and Data Analytics** — University of Cagliari, July 2026 
+🎓 **BSc in Applied Computer Science and Data Analytics** — University of Cagliari, July 2026   
 🎯 Enrolling in **MSc Computer Engineering, Cybersecurity & AI** (CyberAI) — UniCa, September 2026  
 📍 Cagliari, Sardinia, Italy | 🌍 Open to remote and international opportunities  
 📧 [davide.deplano@gmail.com](mailto:davide.deplano@gmail.com)  
