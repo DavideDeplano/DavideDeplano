@@ -94,9 +94,9 @@ adversarial training defenses.
 **Data Science** — End-to-end pipelines: preprocessing, feature extraction, anomaly detection,
 evaluation on imbalanced data.
 
-**Software Engineering** — Modular Python packages, configuration-driven design, reproducible
-environments, UML design documentation.
-
+**Software Engineering** — Modular Python packages, configuration-driven design, unit and
+acceptance testing with pytest, static typing (mypy), linting (ruff), CI with GitHub Actions,
+UML design documentation, and profiling-driven optimisation.
 ---
 
 ## 🛠️ Stack
