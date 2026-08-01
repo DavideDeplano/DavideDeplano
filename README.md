@@ -66,6 +66,21 @@ Random Forest is the strongest model: accuracy 0.82, ROC-AUC 0.76. SMOTE raises 
 default class from 0.37 to 0.47 (F1 0.50) at the cost of precision — the recall/precision
 trade-off that matters in credit risk.
 
+### [🐠 aquarium-adventures](https://github.com/DavideDeplano/aquarium-adventures)
+Software-engineering project (with Sebastiano Seu): a composable data pipeline over simulated
+aquarium sensor data, computing per-tank stress metrics and statistics on large volumes.
+
+Built as production-style Python rather than a script: `uv` with a lockfile for reproducible
+installs, unit and acceptance test suites under `pytest`, static typing checked with `mypy`,
+linting with `ruff`, pre-commit hooks, and a GitHub Actions workflow running lint, type-check and
+tests on every push and pull request. Optional run logging to Weights & Biases. Designed from UML
+use-case, class and sequence diagrams.
+
+Performance work with the **Scalene** profiler: the hot path `pairwise_stress_function` is
+JIT-compiled with Numba and parallelised with Joblib, bringing `computations.py` down to 14.3% of
+total runtime (966 ms of 6.765 s); the interactive profiling report is committed to the repo.
+Data handling uses Polars.
+
 ---
 
 ## 🔧 What I work on
