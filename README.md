@@ -15,17 +15,21 @@
 Adaptation and validation on real SRT data of a multi-stage anomaly-detection pipeline for
 SETI-like radio signals, based on the methodology of Pardo et al. (AJ 2025). Candidates pass a
 density-based pre-filter (cross-correlation features, UMAP embedding, per-category KDEs) trained
-on simulated cadences, are then independently scored by a frequency-based GMM ensemble and an
-ON/OFF similarity metric in UMAP space, and finally ranked to prioritise human inspection.
+on simulated cadences, are then scored by a bagged-GMM frequency filter and an ON/OFF similarity
+metric in UMAP space, and ranked to prioritise human inspection.
 
-Original contributions: an **NCC-max cross-correlation extractor** tolerant to frequency drifts
-(validated against a Pearson baseline), plus convolutional-autoencoder and Random-Forest filters
-optimised with Keras Tuner / Hyperband, and memory mapping for datasets larger than 32 GB.
+Main contribution: an **NCC-max cross-correlation extractor** tolerant to frequency drifts,
+validated against a Pearson baseline. Two exploratory branches — a Keras Tuner–optimised
+convolutional autoencoder and a Random Forest on handcrafted ON/OFF contrast features — were also
+implemented; the Random Forest result is a documented negative one, high accuracy on the synthetic
+domain and indistinguishable score distributions on real data, which quantifies the
+simulation-to-reality gap of the training set.
 
-Built as a modular, reproducible framework: YAML configuration, `src/srtad` package with a
-pluggable filter interface, UML documentation, and cross-platform setup and run scripts.
+Built as a reproducible framework: YAML configuration, pluggable filter interface, UML
+documentation, memory-mapped training for 1.28M synthetic cadences, and an interactive UMAP
+reverse-search tool for cluster and RFI investigation.
 
-🔗 [srt-anomaly-detection](https://github.com/DavideDeplano/srt-anomaly-detection)
+🔗 [srt-anomaly-detection](https://github.com/DavideDeplano/srt-anomaly-detection)   
 
 ---
 
