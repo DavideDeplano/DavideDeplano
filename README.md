@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Davide Deplano
 
-🎓 BSc in Applied Computer Science and Data Analytics — University of Cagliari, July 2026   
+🎓 BSc in Applied Computer Science and Data Analytics — University of Cagliari, July 2026  
 🎯 MSc Computer Engineering, Cybersecurity & AI (CyberAI) — UniCa, from September 2026  
 📍 Cagliari, Sardinia, Italy | 🌍 Open to remote and international opportunities  
 📧 [davide.deplano@gmail.com](mailto:davide.deplano@gmail.com)  
@@ -12,14 +12,18 @@
 
 **Technosignature Search at INAF – Sardinia Radio Telescope** (9 months)
 
-Adaptation and validation on real SRT data of a multi-stage ML pipeline for technosignature
-detection, based on the method of Pardo et al. (AJ 2025). The pipeline combines a density
-filter (UMAP + KDE), a frequency filter (ensemble GMM with bagging), and an ON/OFF
-similarity filter in UMAP space.
+Adaptation and validation on real SRT data of a multi-stage anomaly-detection pipeline for
+SETI-like radio signals, based on the methodology of Pardo et al. (AJ 2025). Candidates pass a
+density-based pre-filter (cross-correlation features, UMAP embedding, per-category KDEs) trained
+on simulated cadences, are then independently scored by a frequency-based GMM ensemble and an
+ON/OFF similarity metric in UMAP space, and finally ranked to prioritise human inspection.
 
-Original contributions: an **NCC-max feature extractor** tolerant to frequency drifts, and a
-convolutional autoencoder extension optimised via Keras Tuner / Hyperband with 3-phase
-training and memory mapping for datasets larger than 32 GB.
+Original contributions: an **NCC-max cross-correlation extractor** tolerant to frequency drifts
+(validated against a Pearson baseline), plus convolutional-autoencoder and Random-Forest filters
+optimised with Keras Tuner / Hyperband, and memory mapping for datasets larger than 32 GB.
+
+Built as a modular, reproducible framework: YAML configuration, `src/srtad` package with a
+pluggable filter interface, UML documentation, and cross-platform setup and run scripts.
 
 🔗 [srt-anomaly-detection](https://github.com/DavideDeplano/srt-anomaly-detection)
 
@@ -27,24 +31,36 @@ training and memory mapping for datasets larger than 32 GB.
 
 ## 🧩 Selected Projects
 
-| Project | Focus | Result |
-|---|---|---|
-| [🛡️ deepfake-detection-cnn-adversarial](https://github.com/DavideDeplano/deepfake-detection-cnn-adversarial) | Adversarial robustness of image deepfake detectors | *[clean vs. adversarial accuracy — to fill]* |
-| [🔐 cyber-intrusion-detection](https://github.com/DavideDeplano/cyber-intrusion-detection) | Supervised vs. unsupervised intrusion detection | Random Forest F1 ≈ 0.999; One-Class SVM F1 ≈ 0.994; MLP F1 ≈ 0.990; VAE F1 ≈ 0.969 |
-| [📊 credit-default-risk-ml](https://github.com/DavideDeplano/credit-default-risk-ml) | Credit card payment default prediction | *[best model + metric — to fill]* |
-| [🛰️ srt-anomaly-detection](https://github.com/DavideDeplano/srt-anomaly-detection) | Anomaly detection on radio telescope data | *[reduction in candidates / detection rate — to fill]* |
+### [🛡️ deepfake-detection-cnn-adversarial](https://github.com/DavideDeplano/deepfake-detection-cnn-adversarial)
+Binary CNN deepfake detector (RGB vs grayscale) evaluated under PGD white-box and transfer
+black-box attacks, hardened with PGD adversarial training (Madry et al., 2018).
 
-**deepfake-detection-cnn-adversarial** — Binary CNN detector comparing RGB vs grayscale inputs,
-evaluated under PGD (white-box) and transfer (black-box) attacks, with PGD adversarial training
-(Madry et al., 2018) as defense.
+| Model | Clean | PGD ε=0.01 | PGD ε=0.02 |
+|---|---|---|---|
+| RGB, undefended | 97.9% | 62.1% | 9.6% |
+| RGB, adversarially trained | 99.2% | 87.9% | 41.3% |
+| Grayscale, undefended | 98.3% | 71.7% | 20.8% |
+| Grayscale, adversarially trained | 97.9% | 85.4% | 47.1% |
 
-**cyber-intrusion-detection** — KDD Cup 1999 (10% subset). Comparison of Random Forest,
-One-Class SVM, MLP and a Variational Autoencoder, with hyperparameter tuning and feature
-interpretation.
+Imperceptible perturbations collapse undefended detectors from ~98% to ~62–72%; adversarial
+training recovers ~26 points on RGB at ε=0.01 at negligible cost in clean accuracy. At ε=0.05
+the defense no longer generalises — both models still collapse.
 
-**credit-default-risk-ml** — UCI *Default of Credit Card Clients*. Random Forest, KNN and Naive
-Bayes with SMOTE for class imbalance and GridSearchCV for tuning. Modular structure with
-`src/`, saved hyperparameters and generated plots.
+### [🔐 cyber-intrusion-detection](https://github.com/DavideDeplano/cyber-intrusion-detection)
+Network intrusion detection on KDD Cup 1999 (10% subset), comparing supervised and
+unsupervised approaches with hyperparameter tuning and feature interpretation.
+
+Random Forest F1 ≈ 0.999 · One-Class SVM F1 ≈ 0.994 · MLP F1 ≈ 0.990 · VAE F1 ≈ 0.969
+
+### [📊 credit-default-risk-ml](https://github.com/DavideDeplano/credit-default-risk-ml)
+Credit card payment default prediction on the UCI *Default of Credit Card Clients* dataset
+(22% positive class). Random Forest, KNN, Naive Bayes and two custom classifiers, each evaluated
+across five preprocessing configurations (scaling, variance-threshold selection, SMOTE
+balancing), with GridSearchCV tuning optimised for F1 on the minority class.
+
+Random Forest is the strongest model: accuracy 0.82, ROC-AUC 0.76. SMOTE raises recall on the
+default class from 0.37 to 0.47 (F1 0.50) at the cost of precision — the recall/precision
+trade-off that matters in credit risk.
 
 ---
 
@@ -57,16 +73,16 @@ Bayes with SMOTE for class imbalance and GridSearchCV for tuning. Modular struct
 adversarial training defenses.
 
 **Data Science** — End-to-end pipelines: preprocessing, feature extraction, anomaly detection,
-evaluation.
+evaluation on imbalanced data.
 
-**Software Engineering** — Modular Python projects, configuration-driven design, reproducible
-environments.
+**Software Engineering** — Modular Python packages, configuration-driven design, reproducible
+environments, UML design documentation.
 
 ---
 
 ## 🛠️ Stack
 
-`Python` `PyTorch` `TensorFlow/Keras` `scikit-learn` `pandas` `NumPy` `Docker` `Git` `SQL` `C`
+`Python` `TensorFlow/Keras` `scikit-learn` `imbalanced-learn` `UMAP` `pandas` `NumPy` `Git` `SQL` `C`
 
 ---
 
