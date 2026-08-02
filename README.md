@@ -35,6 +35,16 @@ reverse-search tool for cluster and RFI investigation.
 
 ## 🧩 Selected Projects
 
+### [🎙️ audio-deepfake-detection](https://github.com/DavideDeplano/audio-deepfake-detection)
+Synthetic speech detector: frozen wav2vec2 encoder with a trained classification head, served as
+a containerised FastAPI service with tests and CI.
+
+The project measures the generalisation gap rather than chasing accuracy. The same model scores
+**3.66% EER** on known attacks in studio conditions, **8.52%** on thirteen unseen attack
+algorithms, and **29.66%** on real-world audio. Quadrupling the training data cut in-domain error
+by 29% and out-of-domain error by 5.7% — the gap widened rather than closing, showing the failure
+is domain shift, not undertraining.
+
 ### [🛡️ deepfake-detection-cnn-adversarial](https://github.com/DavideDeplano/deepfake-detection-cnn-adversarial)
 Binary CNN deepfake detector (RGB vs grayscale) evaluated under PGD white-box and transfer
 black-box attacks, hardened with PGD adversarial training (Madry et al., 2018).
@@ -96,7 +106,9 @@ evaluation on imbalanced data.
 
 **Software Engineering** — Modular Python packages, configuration-driven design, unit and
 acceptance testing with pytest, static typing (mypy), linting (ruff), CI with GitHub Actions,
-UML design documentation, and profiling-driven optimisation.
+REST services with FastAPI, containerisation with Docker, UML design documentation, and
+profiling-driven optimisation.   
+
 ---
 
 ## 🛠️ Stack
