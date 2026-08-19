@@ -1,10 +1,10 @@
 # 👋 Hi, I'm Davide Deplano
 
-> **Machine Learning · AI Security · Deep Learning on real-world data**
+> **Machine Learning · AI Security · Deep Learning on real-world data**  
 
-🎓 BSc Applied Computer Science & Data Analytics — UniCa · Jul 2026
-🎯 MSc Computer Engineering, Cybersecurity & AI — UniCa · from Sep 2026
-📍 Cagliari, Sardinia 🇮🇹 · 🌍 Open to remote & international roles
+🎓 BSc Applied Computer Science & Data Analytics — UniCa · Jul 2026  
+🎯 MSc Computer Engineering, Cybersecurity & AI — UniCa · from Sep 2026  
+📍 Cagliari, Sardinia 🇮🇹 · 🌍 Open to remote & international roles  
 
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:davide.deplano@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/davide-deplano-a331a812a)
