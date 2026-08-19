@@ -1,121 +1,63 @@
 # 👋 Hi, I'm Davide Deplano
 
-🎓 BSc in Applied Computer Science and Data Analytics — University of Cagliari, July 2026  
-🎯 MSc Computer Engineering, Cybersecurity & AI (CyberAI) — UniCa, from September 2026  
-📍 Cagliari, Sardinia, Italy | 🌍 Open to remote and international opportunities  
-📧 [davide.deplano@gmail.com](mailto:davide.deplano@gmail.com)  
-🔗 [LinkedIn](https://www.linkedin.com/in/davide-deplano-a331a812a)
+> **Machine Learning · AI Security · Deep Learning on real-world data**
 
----
+🎓 BSc Applied Computer Science & Data Analytics — UniCa · Jul 2026
+🎯 MSc Computer Engineering, Cybersecurity & AI — UniCa · from Sep 2026
+📍 Cagliari, Sardinia 🇮🇹 · 🌍 Open to remote & international roles
 
-## 🛰️ Research & Internship Project
-
-**Technosignature Search at INAF – Sardinia Radio Telescope** (9 months)
-
-Adaptation and validation on real SRT data of a multi-stage anomaly-detection pipeline for
-SETI-like radio signals, based on the methodology of Pardo et al. (AJ 2025). Candidates pass a
-density-based pre-filter (cross-correlation features, UMAP embedding, per-category KDEs) trained
-on simulated cadences, are then scored by a bagged-GMM frequency filter and an ON/OFF similarity
-metric in UMAP space, and ranked to prioritise human inspection.
-
-Main contribution: an **NCC-max cross-correlation extractor** tolerant to frequency drifts,
-validated against a Pearson baseline. Two exploratory branches — a Keras Tuner–optimised
-convolutional autoencoder and a Random Forest on handcrafted ON/OFF contrast features — were also
-implemented; the Random Forest result is a documented negative one, high accuracy on the synthetic
-domain and indistinguishable score distributions on real data, which quantifies the
-simulation-to-reality gap of the training set.
-
-Built as a reproducible framework: YAML configuration, pluggable filter interface, UML
-documentation, memory-mapped training for 1.28M synthetic cadences, and an interactive UMAP
-reverse-search tool for cluster and RFI investigation.
-
-🔗 [srt-anomaly-detection](https://github.com/DavideDeplano/srt-anomaly-detection)   
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:davide.deplano@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/davide-deplano-a331a812a)
 
 ---
 
 ## 🧩 Selected Projects
 
-### [🎙️ audio-deepfake-detection](https://github.com/DavideDeplano/audio-deepfake-detection)
-Synthetic speech detector: frozen wav2vec2 encoder with a trained classification head, served as
-a containerised FastAPI service with tests and CI.
+### 🛰️ [srt-anomaly-detection](https://github.com/DavideDeplano/srt-anomaly-detection)
+Multi-stage anomaly-detection pipeline for **SETI-like signals** on real **Sardinia Radio Telescope** data — 9-month INAF internship. NCC-max cross-correlation extractor, UMAP + KDE pre-filter, bagged-GMM scoring, memory-mapped training on 1.28M synthetic cadences.
 
-The project measures the generalisation gap rather than chasing accuracy. The same model scores
-**3.66% EER** on known attacks in studio conditions, **8.52%** on thirteen unseen attack
-algorithms, and **29.66%** on real-world audio. Quadrupling the training data cut in-domain error
-by 29% and out-of-domain error by 5.7% — the gap widened rather than closing, showing the failure
-is domain shift, not undertraining.
+### 🎙️ [audio-deepfake-detection](https://github.com/DavideDeplano/audio-deepfake-detection)
+wav2vec2 + classification head, served via **FastAPI / Docker** with CI. Measures the generalisation gap:
+`EER 3.66%` in-studio · `8.52%` unseen attacks · `29.66%` in-the-wild.
 
-### [🛡️ deepfake-detection-cnn-adversarial](https://github.com/DavideDeplano/deepfake-detection-cnn-adversarial)
-Binary CNN deepfake detector (RGB vs grayscale) evaluated under PGD white-box and transfer
-black-box attacks, hardened with PGD adversarial training (Madry et al., 2018).
+### 🛡️ [deepfake-detection-cnn-adversarial](https://github.com/DavideDeplano/deepfake-detection-cnn-adversarial)
+CNN deepfake detector under **PGD** white-box and transfer attacks, hardened with **adversarial training** (Madry et al., 2018). Recovers ~26 points at ε=0.01 at negligible clean-accuracy cost.
 
-| Model | Clean | PGD ε=0.01 | PGD ε=0.02 |
-|---|---|---|---|
-| RGB, undefended | 97.9% | 62.1% | 9.6% |
-| RGB, adversarially trained | 99.2% | 87.9% | 41.3% |
-| Grayscale, undefended | 98.3% | 71.7% | 20.8% |
-| Grayscale, adversarially trained | 97.9% | 85.4% | 47.1% |
+### 🔐 [cyber-intrusion-detection](https://github.com/DavideDeplano/cyber-intrusion-detection)
+Supervised vs unsupervised NIDS on **KDD Cup 1999**. `RF F1 ≈ 0.999` · `One-Class SVM 0.994` · `MLP 0.990` · `VAE 0.969`.
 
-Imperceptible perturbations collapse undefended detectors from ~98% to ~62–72%; adversarial
-training recovers ~26 points on RGB at ε=0.01 at negligible cost in clean accuracy. At ε=0.05
-the defense no longer generalises — both models still collapse.
+### 📊 [credit-default-risk-ml](https://github.com/DavideDeplano/credit-default-risk-ml)
+Credit-card default prediction on UCI dataset. Random Forest: `accuracy 0.82`, `ROC-AUC 0.76`. SMOTE lifts minority-class recall `0.37 → 0.47`.
 
-### [🔐 cyber-intrusion-detection](https://github.com/DavideDeplano/cyber-intrusion-detection)
-Network intrusion detection on KDD Cup 1999 (10% subset), comparing supervised and
-unsupervised approaches with hyperparameter tuning and feature interpretation.
+### 🐠 [aquarium-adventures](https://github.com/DavideDeplano/aquarium-adventures)
+Production-style Python data pipeline: `uv` · `pytest` · `mypy` · `ruff` · GitHub Actions CI. Hot path JIT-compiled with **Numba** + parallelised with **Joblib** after **Scalene** profiling.
 
-Random Forest F1 ≈ 0.999 · One-Class SVM F1 ≈ 0.994 · MLP F1 ≈ 0.990 · VAE F1 ≈ 0.969
+---
 
-### [📊 credit-default-risk-ml](https://github.com/DavideDeplano/credit-default-risk-ml)
-Credit card payment default prediction on the UCI *Default of Credit Card Clients* dataset
-(22% positive class). Random Forest, KNN, Naive Bayes and two custom classifiers, each evaluated
-across five preprocessing configurations (scaling, variance-threshold selection, SMOTE
-balancing), with GridSearchCV tuning optimised for F1 on the minority class.
+## 🛠️ Tech Stack
 
-Random Forest is the strongest model: accuracy 0.82, ROC-AUC 0.76. SMOTE raises recall on the
-default class from 0.37 to 0.47 (F1 0.50) at the cost of precision — the recall/precision
-trade-off that matters in credit risk.
-
-### [🐠 aquarium-adventures](https://github.com/DavideDeplano/aquarium-adventures)
-Software-engineering project (with Sebastiano Seu): a composable data pipeline over simulated
-aquarium sensor data, computing per-tank stress metrics and statistics on large volumes.
-
-Built as production-style Python rather than a script: `uv` with a lockfile for reproducible
-installs, unit and acceptance test suites under `pytest`, static typing checked with `mypy`,
-linting with `ruff`, pre-commit hooks, and a GitHub Actions workflow running lint, type-check and
-tests on every push and pull request. Optional run logging to Weights & Biases. Designed from UML
-use-case, class and sequence diagrams.
-
-Performance work with the **Scalene** profiler: the hot path `pairwise_stress_function` is
-JIT-compiled with Numba and parallelised with Joblib, bringing `computations.py` down to 14.3% of
-total runtime (966 ms of 6.765 s); the interactive profiling report is committed to the repo.
-Data handling uses Polars.
+![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
 ---
 
 ## 🔧 What I work on
 
-**Machine Learning & Deep Learning** — CNNs, autoencoders, VAEs, GMMs, manifold learning
-(UMAP), tree-based and kernel methods. Supervised and unsupervised pipelines on real data.
-
-**AI Security** — Adversarial robustness of deep models: evasion attacks (PGD, transfer) and
-adversarial training defenses.
-
-**Data Science** — End-to-end pipelines: preprocessing, feature extraction, anomaly detection,
-evaluation on imbalanced data.
-
-**Software Engineering** — Modular Python packages, configuration-driven design, unit and
-acceptance testing with pytest, static typing (mypy), linting (ruff), CI with GitHub Actions,
-REST services with FastAPI, containerisation with Docker, UML design documentation, and
-profiling-driven optimisation.   
+- **Machine Learning & Deep Learning** — CNNs, autoencoders, VAEs, GMMs, manifold learning, tree-based & kernel methods
+- **AI Security** — Adversarial robustness, evasion attacks (PGD, transfer), adversarial training defenses
+- **Data Science** — End-to-end pipelines on real, imbalanced data
+- **Software Engineering** — Modular Python, testing, static typing, CI, FastAPI, Docker, profiling
 
 ---
 
-## 🛠️ Stack
-
-`Python` `TensorFlow/Keras` `scikit-learn` `imbalanced-learn` `UMAP` `pandas` `NumPy` `Git` `SQL` `C`
-
----
-
-⭐ Feel free to explore my pinned repositories or connect on
-[LinkedIn](https://www.linkedin.com/in/davide-deplano-a331a812a).
+⭐ Explore my pinned repositories or reach out on [LinkedIn](https://www.linkedin.com/in/davide-deplano-a331a812a).
