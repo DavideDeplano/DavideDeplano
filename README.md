@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Davide Deplano
 
-> **Machine Learning · AI Security · Deep Learning on real-world data**  
+> **Machine Learning · AI Security · Data Analytics on real-world data**  
 
 🎓 BSc Applied Computer Science & Data Analytics — UniCa · Jul 2026  
 🎯 MSc Computer Engineering, Cybersecurity & AI — UniCa · from Sep 2026  
@@ -21,6 +21,9 @@ RAG agent over course PDFs with page-level citations. e5-base embeddings, Chroma
 
 ### 🛰️ [srt-anomaly-detection](https://github.com/DavideDeplano/srt-anomaly-detection)
 Multi-stage anomaly-detection pipeline for **SETI-like signals** on real **Sardinia Radio Telescope** data — 9-month INAF internship. NCC-max cross-correlation extractor, UMAP + KDE pre-filter, bagged-GMM scoring, memory-mapped training on 1.28M synthetic cadences.
+
+### 🌍 [sardinia-air-quality](https://github.com/DavideDeplano/sardinia-air-quality)
+PM10 across Sardinia's monitoring network vs EU limit values — 6M measurements from the EEA archive. One station over the daily limit in five years out of ten; the industrial sites come out cleaner than background. Python pipeline + **Power BI** dashboard.
 
 ### 🎙️ [audio-deepfake-detection](https://github.com/DavideDeplano/audio-deepfake-detection)
 wav2vec2 + classification head, served via **FastAPI / Docker** with CI. Measures the generalisation gap:
@@ -69,12 +72,15 @@ Production-style Python data pipeline: `uv` · `pytest` · `mypy` · `ruff` · G
 
 ![](https://skillicons.dev/icons?i=mysql,postgres,d3&theme=dark)
 
+![](https://img.shields.io/badge/Power%20BI-1a1a1a?style=flat&logo=powerbi&logoColor=white)
+
 ---
 
 ## 🔧 What I work on
 
 - **Machine Learning & Deep Learning** — CNNs, autoencoders, VAEs, GMMs, manifold learning, tree-based & kernel methods
 - **AI Security** — Adversarial robustness, evasion attacks (PGD, transfer), adversarial training defenses
+- **Data Analytics & BI** — Open data pipelines, regulatory thresholds, Power BI dashboards
 - **Data Science** — End-to-end pipelines on real, imbalanced data
 - **Software Engineering** — Modular Python, testing, static typing, CI, FastAPI, Docker, profiling
 
