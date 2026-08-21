@@ -6,8 +6,14 @@
 🎯 MSc Computer Engineering, Cybersecurity & AI — UniCa · from Sep 2026  
 📍 Cagliari, Sardinia 🇮🇹 · 🌍 Open to remote & international roles  
 
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:davide.deplano@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/davide-deplano-a331a812a)
+[![](https://skillicons.dev/icons?i=gmail&theme=dark)](mailto:davide.deplano@gmail.com)
+[![](https://skillicons.dev/icons?i=linkedin&theme=dark)](https://www.linkedin.com/in/davide-deplano-a331a812a)
+
+---
+
+## 🚧 Currently building
+### 📚 [cyberai-study-agent](https://github.com/DavideDeplano/cyberai-study-agent)  
+RAG agent over course PDFs with page-level citations. e5-base embeddings, ChromaDB, Gemini 2.5 Flash.
 
 ---
 
@@ -34,20 +40,34 @@ Production-style Python data pipeline: `uv` · `pytest` · `mypy` · `ruff` · G
 
 ---
 
-## 🛠️ Tech Stack
+### 🛠️ Tech Stack
 
-![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+**Languages**
+
+![](https://skillicons.dev/icons?i=python,c,java,r&theme=dark)
+
+**ML & Data**
+
+![](https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,anaconda,jupyter&theme=dark)
+
+![](https://img.shields.io/badge/pandas-1a1a1a?style=flat&logo=pandas&logoColor=white)
+![](https://img.shields.io/badge/NumPy-1a1a1a?style=flat&logo=numpy&logoColor=white)
+![](https://img.shields.io/badge/Polars-1a1a1a?style=flat&logo=polars&logoColor=white)
+![](https://img.shields.io/badge/Keras-1a1a1a?style=flat&logo=keras&logoColor=white)
+![](https://img.shields.io/badge/Matplotlib-1a1a1a?style=flat&logo=python&logoColor=white)
+![](https://img.shields.io/badge/Spark-1a1a1a?style=flat&logo=apachespark&logoColor=white)
+![](https://img.shields.io/badge/Hadoop-1a1a1a?style=flat&logo=apachehadoop&logoColor=white)
+![](https://img.shields.io/badge/UMAP-1a1a1a?style=flat&logo=scikitlearn&logoColor=white)
+
+**Engineering**
+
+![](https://skillicons.dev/icons?i=fastapi,docker,git,githubactions,linux,bash&theme=dark)
+
+![](https://img.shields.io/badge/pytest-1a1a1a?style=flat&logo=pytest&logoColor=white)
+
+**Databases & Viz**
+
+![](https://skillicons.dev/icons?i=mysql,postgres,d3&theme=dark)
 
 ---
 
