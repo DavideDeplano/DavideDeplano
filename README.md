@@ -35,6 +35,9 @@ CNN deepfake detector under **PGD** white-box and transfer attacks, hardened wit
 ### 🔐 [cyber-intrusion-detection](https://github.com/DavideDeplano/cyber-intrusion-detection)
 Supervised vs unsupervised NIDS on **KDD Cup 1999**. `RF F1 ≈ 0.999` · `One-Class SVM 0.994` · `MLP 0.990` · `VAE 0.969`.
 
+### 🧿 [wazuh-detection-lab](https://github.com/DavideDeplano/wazuh-detection-lab)
+Hands-on **SIEM detection engineering** on **Wazuh**. Attacked with **Atomic Red Team**, wrote custom rules mapped to **MITRE ATT&CK** for gaps the default ruleset missed — credential access, cron persistence, defense evasion. FIM tuning + rule authoring, validated against each attack.
+
 ### 📊 [credit-default-risk-ml](https://github.com/DavideDeplano/credit-default-risk-ml)
 Credit-card default prediction on UCI dataset. Random Forest: `accuracy 0.82`, `ROC-AUC 0.76`. SMOTE lifts minority-class recall `0.37 → 0.47`.
 
@@ -80,6 +83,7 @@ Production-style Python data pipeline: `uv` · `pytest` · `mypy` · `ruff` · G
 
 - **Machine Learning & Deep Learning** — CNNs, autoencoders, VAEs, GMMs, manifold learning, tree-based & kernel methods
 - **AI Security** — Adversarial robustness, evasion attacks (PGD, transfer), adversarial training defenses
+- **Blue Team / SOC** — SIEM detection engineering on Wazuh, MITRE ATT&CK mapping, adversary emulation with Atomic Red Team
 - **Data Analytics & BI** — Open data pipelines, regulatory thresholds, Power BI dashboards
 - **Data Science** — End-to-end pipelines on real, imbalanced data
 - **Software Engineering** — Modular Python, testing, static typing, CI, FastAPI, Docker, profiling
